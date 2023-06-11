@@ -1,0 +1,103 @@
+a:link{color:white;}
+a:hover{color:red}
+a:hover{text-decoration:none;}
+a{text-decoration:none;}
+.start
+{
+color: rgb(236, 108, 83);
+background-color:rgb(107, 198, 208);
+text-align: center;
+}
+.top
+{
+background-image: url("top_img.jpg");
+background-size:cover;
+background-attachment:no-fixed;
+background-repeat:no-repeat;
+width: 100vw ;
+height: 100vh;            
+}
+.head
+{
+position:no-fixed;
+width:100%;
+background-color:;
+height: 20px;
+font-size: 20px;
+padding: 10px;
+}
+.head1 
+{
+color: black;
+font-size: 50px;
+font-style: italic;
+text-align: center;
+}
+.button {
+background-color:rgb(17, 164, 222);
+border: none;
+padding: 10px 30px;
+text-align: center;
+text-decoration: none;
+border-radius: 20px;
+color: rgb(250, 229, 229);
+}
+.button{font-size: 15px;}
+.head2 
+{
+color: black;
+font-size: 40px;
+font-style: italic;
+text-align: center;
+}
+.head3
+{
+color: grey;
+font-size: 30px;
+font-family: 'system-ui';
+text-align: center;
+}
+.im:hover {
+transform: scale(1.1);
+}
+.im
+{
+border-radius: 15px;     
+}
+.para 
+{
+text-align: center;
+width: 280px;
+height: 80px;
+}   
+.last
+{
+background-image: url("last_img.jpg");
+background-size:cover;
+background-attachment:no-fixed;
+background-repeat:no-repeat;
+width: 100vw ;
+height: 90vh;
+ }
+.im1 
+{
+color: white;
+font-style: italic;
+font-size: 30px;
+text-align: left;
+padding: 15px;
+}
+.zoom:hover {
+transform: scale(1.1); 
+}
+.i 
+{
+padding: 10px;
+}
+.p 
+{
+width: 600px;
+text-align: center;
+color: white;
+background-color: grey;
+}
