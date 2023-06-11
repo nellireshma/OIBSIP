@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>Temperature Converter</title>
+        <style>
+        .heading 
+        {
+            color: rgb(230, 216, 59);
+            padding: 5px;
+            font-size: 30px;
+        }
+        .bg 
+        {
+            background-color: rgb(192, 95, 95);
+            width: 100vw;
+            height: 100vh;
+            font-style: italic;
+        }
+        .h 
+        {
+            color: antiquewhite;
+            font-size: 50px;
+        }
+        .box
+        {
+            width: 200px;
+            height: 40px;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .o 
+        {
+            width: 300px;
+            height: 40px;
+            padding: 7px;
+            text-align: center;
+            background-color:white;
+            color: black;
+            font-size: 25px;
+        }
+        .but1
+        {
+            padding:5px;
+            width:230px;
+            height:60px;
+            border:3px;
+            border-color:white;
+            border-radius:8px;
+            background-color:pink;
+            font-weight: bold;
+            font-size: 19px;
+
+        }
+        .but1:hover{opacity:0.8;}
+        </style>
+
+       
+            
+    </head>
+    <body >
+        <div class="bg">
+            <center>
+                <h1 class="h">Temperature Converter</h1>
+            <h2 class="heading ">Temperature :&nbsp; <input type="number" class="box" id="inputTemperature" placeholder="Enter Temperature"/><br><br></h2>
+            <h2 class="heading">Convert to          :&nbsp;&nbsp;&nbsp;&nbsp;
+            <select class="box " id="convertTo">
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+            </select> </h2>
+            <br> <br>         
+            <button class="but1" type="button" onclick="userConvert()">Convert</button>
+            <br>
+            <h2 class="heading">Result: &nbsp;<p  class="o"  id="userOutput"></p></h2>
+
+            
+        </center>
+        <script>
+            var userInput = document.getElementById("inputTemperature");
+            var unit=document.getElementById("convertTo");
+            var toConvertedTemp;
+            function userConvert()
+             {
+                var temp = parseInt(userInput.value, 10);
+                if(isNaN(temp))
+                {
+                    toConvertedTemp = "Your input is not a number";
+
+                }
+                else if(unit.value === "celsius")
+                {
+                    toConvertedTemp = (temp - 32) * (5/9);
+                    toConvertedTemp = Math.round(toConvertedTemp * 100)/100;
+                    toConvertedTemp= temp + "° F is equal to " + toConvertedTemp + "° C";
+
+                }
+                else if(unit.value === "fahrenheit")
+                {
+                    toConvertedTemp = temp * (9/5) + 32;
+                    toConvertedTemp = Math.round(toConvertedTemp * 100)/100;
+                    toConvertedTemp= temp + "° C is equal to " + toConvertedTemp + "° F";
+                }
+                
+                var convertedTemp = toConvertedTemp;
+                document.getElementById("userOutput").innerHTML=convertedTemp;
+            }
+        </script> 
+        </div>
+            
+        
+    </body>
+</html>
